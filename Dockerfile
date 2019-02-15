@@ -14,3 +14,4 @@ RUN dpkg -i /deb/*.deb
 ENV WINEPREFIX /wineprefix
 ENV WINEARCH win32
 ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8

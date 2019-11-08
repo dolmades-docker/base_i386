@@ -6,6 +6,7 @@ RUN apt-get update && apt-get -y install yad wget less vim software-properties-c
 RUN wget https://dl.winehq.org/wine-builds/winehq.key && apt-key add winehq.key && apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/ && rm winehq.key
 RUN mkdir -p /wineprefix && chmod +rwx /wineprefix && echo 'source /.dolmades/start.env' >> /etc/bash.bashrc
 
+COPY wrapper.sh     /usr/local/bin/wrapper.sh
 COPY targetLauncher /usr/local/bin/targetLauncher
 COPY .dolmades /.dolmades 
 COPY deb/ /deb
